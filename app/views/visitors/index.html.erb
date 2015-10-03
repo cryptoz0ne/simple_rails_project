@@ -1,0 +1,27 @@
+<h3>Welcome</h3>
+<% if current_user %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <table class="table">
+          <tbody>
+          	<tr>
+  	          <th class="col-md-2">First Name</th>
+  	          <th class="col-md-3">Last Name</th>
+  	          <th class="col-md-4">Email Address</th>
+  	          <th class="col-md-3">Phone number</th>
+          	</tr>
+
+            <tr>
+              <td><%= current_user.first_name %></td>
+              <td><%= current_user.last_name %></td>
+              <td><%= current_user.email %></td>
+              <td><%= current_user.phone_num %></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<% end %>
